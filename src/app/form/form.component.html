@@ -1,17 +1,29 @@
 <div class="example-container">
   
-  <form [formGroup]="mioForm">
+  <form class="form-contatto" [formGroup]="mioForm">
     <mat-form-field>
-      <input matInput placeholder="Input" formControlName="nome">
+      <input matInput placeholder="Nome" formControlName="nome">
     </mat-form-field>
+    <span class="validatore" *ngIf="nome.invalid && nome.dirty">Il tuo nome dovrebbe avere almeno 4 caratteri</span>
 
     <mat-form-field>
       <input matInput placeholder="Cognome" formControlName="cognome">
     </mat-form-field>
+    <span class="validatore" *ngIf="cognome.invalid && cognome.dirty">Questo campo non può contenere meno di 4 caratteri</span>
+
+
 
     <mat-form-field>
       <input matInput placeholder="Città" formControlName="citta">
     </mat-form-field>
+    <span class="validatore" *ngIf="citta.invalid && citta.dirty">Scrivi correttamente il nome della tua città</span>
+
+
+    <mat-form-field>
+      <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+    <span class="validatore" *ngIf="email.invalid && email.dirty">Scrivi correttamente il tuo indirizzo email</span>
+
   
 
   <mat-form-field>
@@ -23,8 +35,12 @@
   </form>
 
 </div>
-  
-<h2>Risultato in tempo reale:</h2>
-<p>Titolo inserito: <b>{{this.mioForm.value.nome}}</b></p>
-<p>Autore inserito: <b>{{this.mioForm.value.cognome}}</b></p>
-<p>Città inserita: <b>{{this.mioForm.value.citta}}</b></p>
+
+<div class="tabella">
+  <h2>Risultato in tempo reale:</h2>
+  <p>Titolo inserito: <b>{{this.mioForm.value.nome}}</b></p>
+  <p>Autore inserito: <b>{{this.mioForm.value.cognome}}</b></p>
+  <p>Città inserita: <b>{{this.mioForm.value.citta}}</b></p>
+  <p>Email inserita: <b>{{this.mioForm.value.email}}</b></p>
+
+</div>

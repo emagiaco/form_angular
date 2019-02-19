@@ -7,3 +7,23 @@
   .example-full-width {
     width: 100%;
   }
+
+  .form-contatto{
+    display: grid;
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 2px #cccccc;
+    border-radius: 3px;
+  }
+
+  .tabella{
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+  }
+.validatore{
+  font-size: 13px;
+  margin-bottom: 20px;
+}
